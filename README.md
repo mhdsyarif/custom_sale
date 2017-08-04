@@ -1,1 +1,1 @@
-## Modification of sales module
+## Odoo - Modification of sales module
