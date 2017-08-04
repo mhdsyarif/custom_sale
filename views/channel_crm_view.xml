@@ -11,4 +11,18 @@
             </field>
         </field>
     </record>
+
+    <record id="sale_view_quotation_tree" model="ir.ui.view">
+        <field name="name">sale.view.quotation.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>  
+        <field name="arch" type="xml">
+            <!-- <tree> -->
+                <field name="partner_id" position="after">
+                    <field name="channel"/> 
+                </field>
+            <!-- </tree> -->
+        </field>
+    </record> 
+
 </odoo>
