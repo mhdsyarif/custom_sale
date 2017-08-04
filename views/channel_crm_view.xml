@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <!-- Form quotations dan Sales Order -->
     <record id="sale_view_order_form" model="ir.ui.view">
         <field name="name">sale.view.order.form</field>
         <field name="model">sale.order</field>
@@ -12,16 +13,27 @@
         </field>
     </record>
 
+    <!-- List View quotations -->
     <record id="sale_view_quotation_tree" model="ir.ui.view">
         <field name="name">sale.view.quotation.tree</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_quotation_tree"/>  
         <field name="arch" type="xml">
-            <!-- <tree> -->
                 <field name="partner_id" position="after">
                     <field name="channel"/> 
                 </field>
-            <!-- </tree> -->
+        </field>
+    </record> 
+
+    <!-- List View Sales Orders -->
+    <record id="sale_view_order_tree" model="ir.ui.view">
+        <field name="name">sale.view.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>  
+        <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="channel"/> 
+                </field>
         </field>
     </record> 
 
