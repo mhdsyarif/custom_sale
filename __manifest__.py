@@ -11,7 +11,6 @@
     'license': 'AGPL-3',
     'depends': ['sale'],
     'data': [
-        'views/template.xml',
         'views/channel_crm_view.xml',
         'report/sale_quotation_templates.xml',
     ],
