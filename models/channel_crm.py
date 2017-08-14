@@ -6,5 +6,6 @@ from odoo import models, fields
 
 class ChannelQuotatios(models.Model):
     _inherit = 'sale.order'
+    _name = 'sale.order'
 
     channel = fields.Many2one('utm.source', string="Channel", required="required")
