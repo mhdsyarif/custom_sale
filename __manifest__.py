@@ -9,10 +9,11 @@
     'author': 'Muhammad Syarif',
     'website': 'http://www.mhdsyarif.com',
     'license': 'AGPL-3',
-    'depends': ['sale', 'crm', 'web'],
+    'depends': ['sale'],
     'data': [
         'views/template.xml',
         'views/channel_crm_view.xml',
+        'report/sale_quotation_templates.xml',
     ],
     'images': ['static/description/odoo.png'],
     'installable': True,

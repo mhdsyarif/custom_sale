@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <template id="sale.quotation_custom" inherit_id="sale.report_saleorder_document">
+       
+       <div t-if="doc.user_id.name" position="after">
+            <div t-if="doc.team_id.name" class="col-xs-3">
+                <strong>Sales Team:</strong>
+                <p t-field="doc.team_id"/>
+            </div>
+        </div>
+       
+       <xpath expr="//div[@class='oe_structure'][last()]" position="after">
+            <div class="row mt32 mb32" id="sign">
+                <div class="col-xs-3">
+                    <strong>Created By:</strong>
+                    <p t-field="doc.user_id" style="height:500px"/>
+                </div>
+                <div class="col-xs-3">
+                    <strong>Received By:</strong>
+                    <p t-field="doc.partner_id" style="height:500px"/>
+                </div>
+            </div>
+       </xpath>
+       
+    </template>
+    
+</odoo>
